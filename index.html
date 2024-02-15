@@ -107,32 +107,36 @@
           <div
             class="artboard artboard-horizontal phone-6 flex justify-between"
           >
+            <!-- life -->
             <button class="btn rounded-full bg-[#894189] text-white border-0">
               Life
               <img
                 src="./alphabet-clash-pro-resources/images/life.svg"
                 alt=""
               />
-              <span>1</span>
+              <span id="current-life">5</span>
             </button>
+            <!-- score -->
             <button class="btn rounded-full bg-[#360490] text-white border-0">
               Score
               <img src="alphabet-clash-pro-resources/images/score.svg" alt="" />
-              <span>1</span>
+              <span id="current-score">0</span>
             </button>
           </div>
         </div>
       </section>
       <section
-        class="score flex justify-center items-center min-h-screen hidden"
+        id="final-score"
+        class="flex justify-center items-center min-h-screen hidden"
       >
         <div
-          class="text-white text-center space-y-6 p-4 rounded-xl bg-gradient-to-r from-[#FFFFFF8F] to-[#98979700]"
+          class="text-white text-center space-y-6 p-4 rounded-xl bg-[#FFFFFF8F]"
         >
           <h1 class="text-8xl">
-            <span class="font-extrabold">Score:</span> <span>14</span>
+            <span class="font-extrabold">Score:</span>
+            <span id="last-score">14</span>
           </h1>
-          <button class="btn">Play Again</button>
+          <button onclick="play()" class="btn">Play Again</button>
           <p>Practice will make you Pro</p>
         </div>
       </section>
