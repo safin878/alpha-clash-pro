@@ -6,6 +6,25 @@ function continueGame() {
   currentAlphabetElement.innerText = alphabet;
   setBackgroundColorById(alphabet);
 }
+document.addEventListener("keyup", function (event) {
+  const playerPressed = event.key;
+  console.log("Player Pressed Key", playerPressed);
+  // expected key
+  const currentAlphabetElement = document.getElementById("current-alphabet");
+  const currentAlphabet = currentAlphabetElement.innerText;
+  const expectedAlphabet = currentAlphabet.toLowerCase();
+  console.log(playerPressed, expectedAlphabet);
+  // Condition checking
+  if (playerPressed === expectedAlphabet) {
+    console.log("You got a point");
+    continueGame();
+  } else {
+    console.log("You missed : you lost a point");
+  }
+
+  const background = document.getElementById(expectedAlphabet);
+  background.classList.remove("bg-[#FFA500]");
+});
 
 function play() {
   const homeSection = document.getElementById("home-screen");
